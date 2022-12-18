@@ -8,6 +8,8 @@ Quick example:
 ```
 ```
 
+[Video of it running](https://youtu.be/SNt2uDLyBnU?t=292)
+
 ## Running
 
 ### Mac
