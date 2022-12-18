@@ -3,7 +3,8 @@ PHONY: build
 CC := clang
 AR := ar
 CFLAGS := --std=c99 \
-	-Wall -O0 -g0 \
+	-Wall -O3 -g0 \
+	-Wl,-s \
 	-I./vendor \
 	-DSQLITE_MUTEX_NOOP=1 \
 	-D__DARWIN__

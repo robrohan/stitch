@@ -7,9 +7,33 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  buildLinux:
+    name: Build Ubuntu
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: make
       run: make
+    - name: Tar App File
+      run: |
+        tar -cvf ${{ github.workspace }}/build/Linux-x86_64/stitch.tar -C ${{ github.workspace }}/build/Linux_x86_64/ .
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Linux stitch.tar
+        path: ${{ github.workspace }}/build/Linux-x86_64/stitch.tar
+  buildMac:
+    name: Build Mac
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: make
+      run: make
+    - name: Tar App File
+      run: |
+        tar -cvf ${{ github.workspace }}/build/Darwin-amd64/stitch.tar -C ${{ github.workspace }}/build/Darwin_amd64/ .
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: Mac stitch.tar
+        path: ${{ github.workspace }}/build/Darwin-amd64/stitch.tar
