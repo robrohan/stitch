@@ -1,11 +1,15 @@
 # Stitch
 
-Stich is a command line application that extracts highlights from Kindle and Kobo devices. It puts the output into
+Stitch is a command line application that extracts highlights from Kindle and Kobo devices. It puts the output into
 a local json file which can then be further processed.
 
 Quick example:
 
 ```
+./stitch -t kindle -o kindle.json; \
+	jq ".[].text" kindle.json \
+	| sort \
+	| uniq
 ```
 
 [Video of it running](https://youtu.be/SNt2uDLyBnU?t=292)
@@ -19,7 +23,7 @@ Since the binary is not signed, you must first let Mac OS know the binary is ok 
 - Download the zip file
 - Double click it. It will extract the file.
 - Using Finder, right click on the file _stitch_, and select _Open_.
-- A terimal window will open, and then close.
+- A terminal window will open, and then close.
 
 After that process, you can then use the binary via terminal. 
 
@@ -63,7 +67,7 @@ a global location:
 stitch -t kobo -i '/media/username/KOBOeReader/.kobo/KoboReader.sqlite' -o kobo.json
 ```
 
-**indle**
+**Kindle**
 
 ```
 stitch -t kindle -i '/media/username/Kindle/documents/My Clippings.txt' -o kindle.json
@@ -71,7 +75,7 @@ stitch -t kindle -i '/media/username/Kindle/documents/My Clippings.txt' -o kindl
 
 ## Building from Source
 
-Stich is using _clang_ by default. You'll need to make sure that is installed and setup.
+Stitch is using _clang_ by default. You'll need to make sure that is installed and setup.
 
 ### The Basics
 
