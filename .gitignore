@@ -1,0 +1,9 @@
+vendor/sqlite3
+testdata
+build
+obj
+
+*.snap
+
+kindle.json
+kobo.json
