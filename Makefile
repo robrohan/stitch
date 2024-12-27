@@ -2,9 +2,9 @@ PHONY: build
 
 CC := clang
 AR := ar
+# 	-Wl,-s
 CFLAGS := --std=c99 \
 	-Wall -O3 -g0 \
-	-Wl,-s \
 	-I./vendor \
 	-DSQLITE_MUTEX_NOOP=1 \
 	-D__DARWIN__
@@ -25,7 +25,7 @@ WASM_CFLAGS := --target=wasm32 \
 	-Wl,--no-entry \
 	-Wl,--lto-O3 \
 	-Wl,-z,stack-size=$(STACK_SIZE) \
-	-lm 
+	-lm
 
 #####################################
 SRC=src
@@ -80,10 +80,10 @@ $(BIN): $(OBJS)
 	mkdir -p $(BUILD)/$(SYSTEM)-$(MACHINE)
 	$(CC) $(OBJS) $(CFLAGS) -o $(BUILD)/$(SYSTEM)-$(MACHINE)/$@ $(LFLAGS)
 
-$(OBJ)/%.o: $(SRC)/%.c 
+$(OBJ)/%.o: $(SRC)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@ $(LFLAGS)
 
-preflight: 
+preflight:
 	mkdir -p build
 	mkdir -p obj
 

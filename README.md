@@ -5,14 +5,16 @@ a local json file which can then be further processed.
 
 Quick example:
 
-```
+```bash
 ./stitch -t kindle -o kindle.json; \
 	jq ".[].text" kindle.json \
 	| sort \
 	| uniq
 ```
 
-[Video of it running](https://youtu.be/SNt2uDLyBnU?t=292)
+```bash
+cat kobo.json | jq '.[] | select(.title | contains("Le petit Nicolas")) | .'
+```
 
 ## Running
 
@@ -25,11 +27,11 @@ Since the binary is not signed, you must first let Mac OS know the binary is ok 
 - Using Finder, right click on the file _stitch_, and select _Open_.
 - A terminal window will open, and then close.
 
-After that process, you can then use the binary via terminal. 
+After that process, you can then use the binary via terminal.
 
 Now, you can open terminal.app, and run:
 
-```
+```bash
 % ./stitch -h
 [KS] main (src/main.c:27) Using user: robrohan
 
@@ -44,7 +46,7 @@ Input example:
 
 Here is an example of using Mac OS to extract highlights from Kindle:
 
-```
+```bash
 ./stitch -t kindle -i "/Volumes/Kindle/documents/My Clippings.txt" -o kindle.json
 ```
 
@@ -52,7 +54,7 @@ Here is an example of using Mac OS to extract highlights from Kindle:
 
 Kobo is similar:
 
-```
+```bash
 ./stitch -t kobo -i "/Volumes/KOBOeReader/.kobo/KoboReader.sqlite" -o kobo.json
 ```
 
@@ -63,13 +65,13 @@ a global location:
 
 **Kobo**
 
-```
+```bash
 stitch -t kobo -i '/media/username/KOBOeReader/.kobo/KoboReader.sqlite' -o kobo.json
 ```
 
 **Kindle**
 
-```
+```bash
 stitch -t kindle -i '/media/username/Kindle/documents/My Clippings.txt' -o kindle.json
 ```
 
@@ -79,7 +81,7 @@ Stitch is using _clang_ by default. You'll need to make sure that is installed a
 
 ### The Basics
 
-```
+```bash
 make
 ```
 
@@ -88,9 +90,9 @@ make
 SQLite code is already included in the source directory, however to update the code you'll need
 to do the following:
 
-- Download the source into vendor (_vendor/sqlite3_). 
+- Download the source into vendor (_vendor/sqlite3_).
 - Then run from within that directory:
-```
+```bash
   sh configure
   make sqlite3.c
 ```
