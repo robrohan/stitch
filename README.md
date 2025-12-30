@@ -16,6 +16,44 @@ Quick example:
 cat kobo.json | jq '.[] | select(.title | contains("Le petit Nicolas")) | .'
 ```
 
+Example output:
+
+```json
+[
+  {
+    "type": "Highlight",
+    "deviceType": "Kobo",
+    "id": "LTcyNDY3MDQ2NA==",
+    "isbn": "9781292410074",
+    "title": "Artificial Intelligence: A Modern Approach, Global Edition",
+    "author": "Stuart Russell, Peter Norvig",
+    "page": 0,
+    "startOffset": 0,
+    "endOffset": 153,
+    "date": "11 10 2025 18:38",
+    "text": "It is good practice to maintain data provenance for all your data. For each column in your data set, you should know the exact definition, where the data come from, what the possible values are, and who has worked on it.",
+    "annotation": "",
+    "annotationExtra": ""
+  },
+  {
+    "type": "Highlight",
+    "deviceType": "Kobo",
+    "id": "MTg4MzU2MzA5NQ==",
+    "isbn": "1230000004542",
+    "title": "The War of Art",
+    "author": "Steven Pressfield",
+    "page": 0,
+    "startOffset": 0,
+    "endOffset": 32,
+    "date": "12 29 2025 08:16",
+    "text": "The counterfeit innovator is wildly self-confident. The real one is scared to death.",
+    "annotation": "",
+    "annotationExtra": ""
+  },
+  {}
+]
+```
+
 ## Running
 
 ### Environment Variables
