@@ -18,6 +18,17 @@ cat kobo.json | jq '.[] | select(.title | contains("Le petit Nicolas")) | .'
 
 ## Running
 
+### Environment Variables
+
+You can set the default path to where your ereader mounts by using the following:
+
+```bash
+export STITCH_KOBO="/Volumes/KOBOeReader/.kobo/KoboReader.sqlite"
+export STITCH_KINDLE="/Volumes/Kindle/documents/My Clippings.txt"
+```
+
+After those are set, you can just run `stitch -t kobo; jq "." kobo.json`, for example, to grab all the hightlights off your Kobo.
+
 ### Mac
 
 Since the binary is not signed, you must first let Mac OS know the binary is ok to run. Do the following:
