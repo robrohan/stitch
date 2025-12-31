@@ -33,7 +33,7 @@ jobs:
       run: |
         tar -cvf ${{ github.workspace }}/build/stitch.tar -C ${{ github.workspace }}/build/ .
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: Mac stitch.tar
         path: ${{ github.workspace }}/build/stitch.tar
