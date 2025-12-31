@@ -1,0 +1,346 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA26B12E2F049FC50001C3E9 /* json-builder.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1212F049FC50001C3E9 /* json-builder.c */; };
+		DA26B12F2F049FC50001C3E9 /* spookyhash.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1292F049FC50001C3E9 /* spookyhash.c */; };
+		DA26B1302F049FC50001C3E9 /* export.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B11D2F049FC50001C3E9 /* export.c */; };
+		DA26B1312F049FC50001C3E9 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B12B2F049FC50001C3E9 /* sqlite3.c */; };
+		DA26B1322F049FC50001C3E9 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B11B2F049FC50001C3E9 /* base64.c */; };
+		DA26B1332F049FC50001C3E9 /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B11F2F049FC50001C3E9 /* json.c */; };
+		DA26B1342F049FC50001C3E9 /* kobo.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1252F049FC50001C3E9 /* kobo.c */; };
+		DA26B1352F049FC50001C3E9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1272F049FC50001C3E9 /* main.c */; };
+		DA26B1362F049FC50001C3E9 /* kindle.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1232F049FC50001C3E9 /* kindle.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA26B10E2F049F230001C3E9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DA26B1102F049F230001C3E9 /* Stitch */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Stitch; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA26B11A2F049FC50001C3E9 /* base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		DA26B11B2F049FC50001C3E9 /* base64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		DA26B11C2F049FC50001C3E9 /* export.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = export.h; sourceTree = "<group>"; };
+		DA26B11D2F049FC50001C3E9 /* export.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = export.c; sourceTree = "<group>"; };
+		DA26B11E2F049FC50001C3E9 /* json.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		DA26B11F2F049FC50001C3E9 /* json.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = json.c; sourceTree = "<group>"; };
+		DA26B1202F049FC50001C3E9 /* json-builder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "json-builder.h"; sourceTree = "<group>"; };
+		DA26B1212F049FC50001C3E9 /* json-builder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "json-builder.c"; sourceTree = "<group>"; };
+		DA26B1222F049FC50001C3E9 /* kindle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kindle.h; sourceTree = "<group>"; };
+		DA26B1232F049FC50001C3E9 /* kindle.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kindle.c; sourceTree = "<group>"; };
+		DA26B1242F049FC50001C3E9 /* kobo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kobo.h; sourceTree = "<group>"; };
+		DA26B1252F049FC50001C3E9 /* kobo.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kobo.c; sourceTree = "<group>"; };
+		DA26B1262F049FC50001C3E9 /* log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = log.h; sourceTree = "<group>"; };
+		DA26B1272F049FC50001C3E9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		DA26B1282F049FC50001C3E9 /* spookyhash.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = spookyhash.h; sourceTree = "<group>"; };
+		DA26B1292F049FC50001C3E9 /* spookyhash.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = spookyhash.c; sourceTree = "<group>"; };
+		DA26B12A2F049FC50001C3E9 /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
+		DA26B12B2F049FC50001C3E9 /* sqlite3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		DA26B12C2F049FC50001C3E9 /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA26B10D2F049F230001C3E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA26B1072F049F230001C3E9 = {
+			isa = PBXGroup;
+			children = (
+				DA26B12D2F049FC50001C3E9 /* src */,
+				DA26B1112F049F230001C3E9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA26B1112F049F230001C3E9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA26B1102F049F230001C3E9 /* Stitch */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA26B12D2F049FC50001C3E9 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DA26B11A2F049FC50001C3E9 /* base64.h */,
+				DA26B11B2F049FC50001C3E9 /* base64.c */,
+				DA26B11C2F049FC50001C3E9 /* export.h */,
+				DA26B11D2F049FC50001C3E9 /* export.c */,
+				DA26B11E2F049FC50001C3E9 /* json.h */,
+				DA26B11F2F049FC50001C3E9 /* json.c */,
+				DA26B1202F049FC50001C3E9 /* json-builder.h */,
+				DA26B1212F049FC50001C3E9 /* json-builder.c */,
+				DA26B1222F049FC50001C3E9 /* kindle.h */,
+				DA26B1232F049FC50001C3E9 /* kindle.c */,
+				DA26B1242F049FC50001C3E9 /* kobo.h */,
+				DA26B1252F049FC50001C3E9 /* kobo.c */,
+				DA26B1262F049FC50001C3E9 /* log.h */,
+				DA26B1272F049FC50001C3E9 /* main.c */,
+				DA26B1282F049FC50001C3E9 /* spookyhash.h */,
+				DA26B1292F049FC50001C3E9 /* spookyhash.c */,
+				DA26B12A2F049FC50001C3E9 /* sqlite3.h */,
+				DA26B12B2F049FC50001C3E9 /* sqlite3.c */,
+				DA26B12C2F049FC50001C3E9 /* types.h */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA26B10F2F049F230001C3E9 /* Stitch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA26B1172F049F230001C3E9 /* Build configuration list for PBXNativeTarget "Stitch" */;
+			buildPhases = (
+				DA26B10C2F049F230001C3E9 /* Sources */,
+				DA26B10D2F049F230001C3E9 /* Frameworks */,
+				DA26B10E2F049F230001C3E9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stitch;
+			packageProductDependencies = (
+			);
+			productName = Stitch;
+			productReference = DA26B1102F049F230001C3E9 /* Stitch */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA26B1082F049F230001C3E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					DA26B10F2F049F230001C3E9 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+				};
+			};
+			buildConfigurationList = DA26B10B2F049F230001C3E9 /* Build configuration list for PBXProject "Stitch" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA26B1072F049F230001C3E9;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = DA26B1112F049F230001C3E9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA26B10F2F049F230001C3E9 /* Stitch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA26B10C2F049F230001C3E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA26B12E2F049FC50001C3E9 /* json-builder.c in Sources */,
+				DA26B12F2F049FC50001C3E9 /* spookyhash.c in Sources */,
+				DA26B1302F049FC50001C3E9 /* export.c in Sources */,
+				DA26B1312F049FC50001C3E9 /* sqlite3.c in Sources */,
+				DA26B1322F049FC50001C3E9 /* base64.c in Sources */,
+				DA26B1332F049FC50001C3E9 /* json.c in Sources */,
+				DA26B1342F049FC50001C3E9 /* kobo.c in Sources */,
+				DA26B1352F049FC50001C3E9 /* main.c in Sources */,
+				DA26B1362F049FC50001C3E9 /* kindle.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DA26B1152F049F230001C3E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 96MW2MVPWL;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DA26B1162F049F230001C3E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 96MW2MVPWL;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DA26B1182F049F230001C3E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96MW2MVPWL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DA26B1192F049F230001C3E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 96MW2MVPWL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA26B10B2F049F230001C3E9 /* Build configuration list for PBXProject "Stitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA26B1152F049F230001C3E9 /* Debug */,
+				DA26B1162F049F230001C3E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA26B1172F049F230001C3E9 /* Build configuration list for PBXNativeTarget "Stitch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA26B1182F049F230001C3E9 /* Debug */,
+				DA26B1192F049F230001C3E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA26B1082F049F230001C3E9 /* Project object */;
+}

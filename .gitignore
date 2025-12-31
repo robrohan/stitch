@@ -9,3 +9,16 @@ obj
 
 kindle.json
 kobo.json
+
+# Xcode
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstateproject.xcworkspace/
+xcuserdata/
+DerivedData/
+
+# Generated files
+*.o
+*.pyc
