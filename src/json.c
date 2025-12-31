@@ -273,7 +273,7 @@ json_value * json_parse_ex (json_settings * settings,
 
    state.uint_max -= 8; /* limit of how much can be added before next check */
    state.ulong_max -= 8;
-
+   root = 0;
    for (state.first_pass = 1; state.first_pass >= 0; -- state.first_pass)
    {
       json_uchar uchar;

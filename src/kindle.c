@@ -138,7 +138,7 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
                 if (strcmp(space_token, "Page") == 0)
                 {
                     char *page_token = strtok(NULL, " ");
-                    int page = strtol(page_token, NULL, 10);
+                    int page = (int)strtol(page_token, NULL, 10);
                     hl->page = page;
                 }
 
@@ -151,7 +151,7 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
                     char *loc_string = calloc(sizeof(char), 20);
                     memcpy(loc_string, space_token, 20);
 
-                    int start = strtol(loc_string, NULL, 10);
+                    int start = (int)strtol(loc_string, NULL, 10);
 
                     hl->start_offset = start;
                     // hl->end_offset = end;

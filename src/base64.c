@@ -8,7 +8,7 @@ static char encoding_table[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'
 static char *decoding_table = NULL;
 static int mod_table[] = {0, 2, 1};
 
-static void build_decoding_table()
+static void build_decoding_table(void)
 {
     decoding_table = malloc(256);
     for (int i = 0; i < 64; i++)
@@ -83,7 +83,7 @@ unsigned char *base64_decode(const unsigned char *data, size_t input_length, siz
     return decoded_data;
 }
 
-void base64_cleanup()
+void base64_cleanup(void)
 {
     free(decoding_table);
 }

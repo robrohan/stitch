@@ -32,11 +32,11 @@ int callback(void *NotUsed, int argc, char **argv, char **azColName)
         {
             if (strcmp(name, "StartOffset") == 0)
             {
-                hl->start_offset = strtol(value, NULL, 10);
+                hl->start_offset = (int)strtol(value, NULL, 10);
             }
             if (strcmp(name, "EndOffset") == 0)
             {
-                hl->end_offset = strtol(value, NULL, 10);
+                hl->end_offset = (int)strtol(value, NULL, 10);
             }
             if (strcmp(name, "Text") == 0)
             {
