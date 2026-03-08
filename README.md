@@ -3,6 +3,14 @@
 Stitch is a command line application that extracts highlights from Kindle and Kobo devices. It puts the output into
 a local json file which can then be further processed.
 
+## LLM Getting Started
+
+You can use the [SKILL.md](skills/stitch/SKILL.md) file to enable Claude Code (or another LLM / agent) to be able to extract highlights from your Kobo or Kindle:
+
+![Running in a claude session](examples/claude.png)
+
+## Human Getting Started
+
 Quick example:
 
 ```bash
@@ -54,11 +62,6 @@ Example output:
 ]
 ```
 
-## Claude
-
-You can use the SKILL.md file to enable Claude Code (or another LLM) to be able to extract highlights from your kobo or kindle:
-
-![examples/claude.png]
 
 ## Running
 

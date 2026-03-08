@@ -174,7 +174,7 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
                     while (date_token != NULL)
                     {
                         date_token = strtok(NULL, ", ");
-                        if (date_token != NULL && strnlen(date_string, 50) < 50)
+                        if (date_token != NULL && strlen(date_string) < 50)
                         {
                             strcat(date_string, date_token);
                             strcat(date_string, " ");
