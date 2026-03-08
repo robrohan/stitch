@@ -1,8 +1,6 @@
 ---
 name: stitch
 description: Run `stitch` to extract highlights from a Kindle or Kobo e-reader and write them to a JSON file. Use when the user wants to dump, export, or query their e-reader highlights.
-allowed-tools: Bash, Read
-argument-hint: [kobo|kindle] [output_file.json]
 ---
 
 The user wants to run `stitch` to extract e-reader highlights.
