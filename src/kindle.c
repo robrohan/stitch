@@ -111,8 +111,13 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
             hl->title = calloc(sizeof(char), strlen(title_token) + 1);
             strcpy(hl->title, title_token);
 
-            hl->attribution = calloc(sizeof(char), strlen(author_token) + 1);
-            strcpy(hl->attribution, author_token);
+	    if (author_token == NULL)
+	    {
+	      strncpy(author_token, " ", 1);
+	    }
+	    
+	    hl->attribution = calloc(sizeof(char), strlen(author_token) + 1);
+	    strcpy(hl->attribution, author_token);
 
             firstline = 0;
             continue;
@@ -149,7 +154,7 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
 
                     // 10000-10000 (TODO: outside the loop)
                     char *loc_string = calloc(sizeof(char), 20);
-                    memcpy(loc_string, space_token, 20);
+                    memcpy(loc_string, space_token, strnlen(space_token, 20));
 
                     int start = (int)strtol(loc_string, NULL, 10);
 
@@ -169,7 +174,7 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
                     while (date_token != NULL)
                     {
                         date_token = strtok(NULL, ", ");
-                        if (date_token != NULL)
+                        if (date_token != NULL && strnlen(date_string, 50) < 50)
                         {
                             strcat(date_string, date_token);
                             strcat(date_string, " ");
@@ -187,7 +192,7 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
         // the data into the highlight text. If it wasn't part of
         // the "ifs" above, it should be the body of the text.
         i++;
-        if (i * buffer_len < MAX_QUOTE_SIZE)
+        if (i * buffer_len < MAX_QUOTE_SIZE && highlight_text != NULL)
         {
             strcat(highlight_text, buffer);
         }

@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -105,6 +106,11 @@ char *record_callback(struct highlights *record)
                          json_string_new(record->extra_annotation_data != NULL ? record->extra_annotation_data : ""));
 
         buf = malloc(json_measure(obj));
+	if (buf == NULL)
+	{
+	  fprintf(stderr, "Malloc failed.\n");
+	  exit(1);
+	}
         json_serialize(buf, obj);
     }
 

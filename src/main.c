@@ -4,6 +4,7 @@
 #include <string.h>
 #include <unistd.h>
 
+#include "base64.h"
 #include "export.h"
 #include "kindle.h"
 #include "kobo.h"
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
     const char *user = getenv("USER");
     if (user == NULL)
     {
-        return 1;
+      exit(1);
     }
     LOG("Using user: %s", user)
 
@@ -104,7 +105,8 @@ int main(int argc, char *argv[])
         }
     }
 
+    base64_cleanup();
     LOG("Done.")
-
-    return 0;
+ 
+    exit(0);
 }
