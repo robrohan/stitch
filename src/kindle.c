@@ -154,7 +154,7 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
 
                     // 10000-10000 (TODO: outside the loop)
                     char *loc_string = calloc(sizeof(char), 20);
-                    memcpy(loc_string, space_token, strnlen(space_token, 20));
+                    memcpy(loc_string, space_token, strlen(space_token));
 
                     int start = (int)strtol(loc_string, NULL, 10);
 
