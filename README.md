@@ -54,6 +54,12 @@ Example output:
 ]
 ```
 
+## Claude
+
+You can use the SKILL.md file to enable Claude Code (or another LLM) to be able to extract highlights from your kobo or kindle:
+
+![examples/claude.png]
+
 ## Running
 
 ### Environment Variables
