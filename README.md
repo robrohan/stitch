@@ -5,7 +5,7 @@ a local json file which can then be further processed.
 
 ## LLM Getting Started
 
-You can use the [SKILL.md](skills/stitch/SKILL.md) file to enable Claude Code (or another LLM / agent) to be able to extract highlights from your Kobo or Kindle:
+You can use the [SKILL.md](https://github.com/robrohan/claude-skills/blob/main/skills/Stitch/SKILL.md) file to enable Claude Code (or another LLM / agent) to be able to extract highlights from your Kobo or Kindle:
 
 ![Running in a claude session](examples/claude.png)
 
