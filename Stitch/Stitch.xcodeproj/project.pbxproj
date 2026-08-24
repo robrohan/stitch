@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15813D8E6C5365FC6EE3D00D /* json-builder.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1212F049FC50001C3E9 /* json-builder.c */; };
+		1A5F4CDCA099D02C1034F1A2 /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1F0B02994DE65B855CB1D2 /* Highlight.swift */; };
+		212F0AEC41AF066F53416914 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B12B2F049FC50001C3E9 /* sqlite3.c */; };
+		369CBC840EBF09A29932F3B9 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B11B2F049FC50001C3E9 /* base64.c */; };
+		43643863F7C6E24106199420 /* stitch_api.c in Sources */ = {isa = PBXBuildFile; fileRef = DAFD7970D2FADD2B6860D83F /* stitch_api.c */; };
+		5945380A93C1CFC343406B16 /* StitchBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49EE8E69CFE7E60EA298101 /* StitchBridge.swift */; };
+		708D96F404C193FB39133052 /* kobo.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1252F049FC50001C3E9 /* kobo.c */; };
+		89A29CC641BDD7B9D94A274D /* json.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B11F2F049FC50001C3E9 /* json.c */; };
+		8E0124C232C4DAF5BB29B31A /* export.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B11D2F049FC50001C3E9 /* export.c */; };
+		AF45C90E371D506B3D6C5622 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1D9096647DA5D92D41008B /* ContentView.swift */; };
+		C469C67931E95FAC9CD34417 /* kindle.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1232F049FC50001C3E9 /* kindle.c */; };
+		C8C89EC530DD85176A7F6114 /* spookyhash.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1292F049FC50001C3E9 /* spookyhash.c */; };
 		DA26B12E2F049FC50001C3E9 /* json-builder.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1212F049FC50001C3E9 /* json-builder.c */; };
 		DA26B12F2F049FC50001C3E9 /* spookyhash.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1292F049FC50001C3E9 /* spookyhash.c */; };
 		DA26B1302F049FC50001C3E9 /* export.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B11D2F049FC50001C3E9 /* export.c */; };
@@ -16,6 +28,9 @@
 		DA26B1342F049FC50001C3E9 /* kobo.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1252F049FC50001C3E9 /* kobo.c */; };
 		DA26B1352F049FC50001C3E9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1272F049FC50001C3E9 /* main.c */; };
 		DA26B1362F049FC50001C3E9 /* kindle.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1232F049FC50001C3E9 /* kindle.c */; };
+		E60E98F2D8B6C90ED7FEB616 /* StitchGUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0104B2DE12749579F0D9A49 /* StitchGUIApp.swift */; };
+		2C1288DCBFF805A5B6700918 /* HighlightDetailWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E0CCE5519B641B6AEE20D /* HighlightDetailWindow.swift */; };
+		CBC625815C3A9D53F8DFA1F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF133314E175EADFDE0FDD8 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +46,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E1D9096647DA5D92D41008B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3A1F0B02994DE65B855CB1D2 /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
+		480E399F089F9C55908FB3D9 /* stitch_api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = stitch_api.h; sourceTree = "<group>"; };
+		621DF903D14EF7741D482C75 /* StitchGUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StitchGUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0104B2DE12749579F0D9A49 /* StitchGUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchGUIApp.swift; sourceTree = "<group>"; };
 		DA26B1102F049F230001C3E9 /* Stitch */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Stitch; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA26B11A2F049FC50001C3E9 /* base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
 		DA26B11B2F049FC50001C3E9 /* base64.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
@@ -51,9 +71,21 @@
 		DA26B12A2F049FC50001C3E9 /* sqlite3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		DA26B12B2F049FC50001C3E9 /* sqlite3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
 		DA26B12C2F049FC50001C3E9 /* types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		DAFD7970D2FADD2B6860D83F /* stitch_api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stitch_api.c; sourceTree = "<group>"; };
+		E49EE8E69CFE7E60EA298101 /* StitchBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchBridge.swift; sourceTree = "<group>"; };
+		FEC5B38D5E78D9FC614034B7 /* Stitch-GUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stitch-GUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		5A4E0CCE5519B641B6AEE20D /* HighlightDetailWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightDetailWindow.swift; sourceTree = "<group>"; };
+		4DF133314E175EADFDE0FDD8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1C0D0C37C745AEE589F30E1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DA26B10D2F049F230001C3E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,10 +96,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		775E3BF99C76A0DA33CE4ED4 /* StitchGUI */ = {
+			isa = PBXGroup;
+			children = (
+				A0104B2DE12749579F0D9A49 /* StitchGUIApp.swift */,
+				2E1D9096647DA5D92D41008B /* ContentView.swift */,
+				3A1F0B02994DE65B855CB1D2 /* Highlight.swift */,
+				E49EE8E69CFE7E60EA298101 /* StitchBridge.swift */,
+				5A4E0CCE5519B641B6AEE20D /* HighlightDetailWindow.swift */,
+				FEC5B38D5E78D9FC614034B7 /* Stitch-GUI-Bridging-Header.h */,
+				4DF133314E175EADFDE0FDD8 /* Assets.xcassets */,
+			);
+			path = StitchGUI;
+			sourceTree = "<group>";
+		};
 		DA26B1072F049F230001C3E9 = {
 			isa = PBXGroup;
 			children = (
 				DA26B12D2F049FC50001C3E9 /* src */,
+				775E3BF99C76A0DA33CE4ED4 /* StitchGUI */,
 				DA26B1112F049F230001C3E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DA26B1102F049F230001C3E9 /* Stitch */,
+				621DF903D14EF7741D482C75 /* StitchGUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +150,8 @@
 				DA26B12A2F049FC50001C3E9 /* sqlite3.h */,
 				DA26B12B2F049FC50001C3E9 /* sqlite3.c */,
 				DA26B12C2F049FC50001C3E9 /* types.h */,
+				480E399F089F9C55908FB3D9 /* stitch_api.h */,
+				DAFD7970D2FADD2B6860D83F /* stitch_api.c */,
 			);
 			name = src;
 			path = ../src;
@@ -110,6 +160,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		867A1A2F1753BF0F7A3B728B /* StitchGUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DB9DC954353E86B5B8100BF /* Build configuration list for PBXNativeTarget "StitchGUI" */;
+			buildPhases = (
+				ED35AF1637ED6DC7B673C61D /* Sources */,
+				1C0D0C37C745AEE589F30E1A /* Frameworks */,
+				47F76EE697F66BA0BC45D03F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StitchGUI;
+			packageProductDependencies = (
+			);
+			productName = StitchGUI;
+			productReference = 621DF903D14EF7741D482C75 /* StitchGUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DA26B10F2F049F230001C3E9 /* Stitch */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DA26B1172F049F230001C3E9 /* Build configuration list for PBXNativeTarget "Stitch" */;
@@ -138,6 +207,9 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
+					867A1A2F1753BF0F7A3B728B = {
+						CreatedOnToolsVersion = 26.2;
+					};
 					DA26B10F2F049F230001C3E9 = {
 						CreatedOnToolsVersion = 26.2;
 					};
@@ -158,9 +230,21 @@
 			projectRoot = "";
 			targets = (
 				DA26B10F2F049F230001C3E9 /* Stitch */,
+				867A1A2F1753BF0F7A3B728B /* StitchGUI */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		47F76EE697F66BA0BC45D03F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBC625815C3A9D53F8DFA1F2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DA26B10C2F049F230001C3E9 /* Sources */ = {
@@ -179,9 +263,84 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED35AF1637ED6DC7B673C61D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				369CBC840EBF09A29932F3B9 /* base64.c in Sources */,
+				8E0124C232C4DAF5BB29B31A /* export.c in Sources */,
+				15813D8E6C5365FC6EE3D00D /* json-builder.c in Sources */,
+				89A29CC641BDD7B9D94A274D /* json.c in Sources */,
+				C469C67931E95FAC9CD34417 /* kindle.c in Sources */,
+				708D96F404C193FB39133052 /* kobo.c in Sources */,
+				212F0AEC41AF066F53416914 /* sqlite3.c in Sources */,
+				C8C89EC530DD85176A7F6114 /* spookyhash.c in Sources */,
+				43643863F7C6E24106199420 /* stitch_api.c in Sources */,
+				E60E98F2D8B6C90ED7FEB616 /* StitchGUIApp.swift in Sources */,
+				AF45C90E371D506B3D6C5622 /* ContentView.swift in Sources */,
+				1A5F4CDCA099D02C1034F1A2 /* Highlight.swift in Sources */,
+				5945380A93C1CFC343406B16 /* StitchBridge.swift in Sources */,
+				2C1288DCBFF805A5B6700918 /* HighlightDetailWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		33BA07BDEBE9793F4005C467 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96MW2MVPWL;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SQLITE_MUTEX_NOOP=1",
+					__DARWIN__,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Stitch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.therohans.Stitch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "StitchGUI/Stitch-GUI-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		95F900B66C40227FEECAEBCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96MW2MVPWL;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"SQLITE_MUTEX_NOOP=1",
+					__DARWIN__,
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Stitch;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.books";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.therohans.Stitch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "StitchGUI/Stitch-GUI-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
 		DA26B1152F049F230001C3E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -326,6 +485,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7DB9DC954353E86B5B8100BF /* Build configuration list for PBXNativeTarget "StitchGUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F900B66C40227FEECAEBCF /* Debug */,
+				33BA07BDEBE9793F4005C467 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DA26B10B2F049F230001C3E9 /* Build configuration list for PBXProject "Stitch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
