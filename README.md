@@ -1,7 +1,11 @@
 # Stitch
 
-Stitch is a command line application that extracts highlights from Kindle and Kobo devices. It puts the output into
-a local json file which can then be further processed.
+Stitch is an application that extracts highlights from Kindle and Kobo devices. It puts the output into
+a local json file which can then be further processed. There is a UI for MacOS and a cli for Linux.
+
+![macOS Kobo](examples/kobo.png)
+
+![macOS Kindle](examples/kindle.png)
 
 ## LLM Getting Started
 
