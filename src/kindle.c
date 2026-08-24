@@ -22,7 +22,10 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
     FILE *file;
     int buffer_len = 256;
     char buffer[buffer_len];
-    char end[12] = "==========\r\n";
+    // Array intentionally left unsized: "==========\r\n" is 12 chars, so a
+    // fixed size of 12 would leave the buffer without a null terminator,
+    // making the strcmp() below read past the end of the array.
+    char end[] = "==========\r\n";
     char *highlight_text = NULL;
     struct highlights *hl = NULL;
 

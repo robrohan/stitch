@@ -116,6 +116,18 @@ Kobo is similar:
 ./stitch -t kobo -i "/Volumes/KOBOeReader/.kobo/KoboReader.sqlite" -o kobo.json
 ```
 
+### Mac GUI
+
+`Stitch/Stitch.xcodeproj` also has a `StitchGUI` scheme: a native SwiftUI app that
+wraps the exact same parsing code as the CLI (via `src/stitch_api.h`, a thin C API
+called from Swift through a bridging header). Pick Kindle or Kobo, choose an input
+file and where to save the JSON, hit Export, and the resulting highlights load into
+a searchable table in the window. Build/run it from Xcode, or:
+
+```bash
+xcodebuild -project Stitch/Stitch.xcodeproj -scheme StitchGUI build
+```
+
 ### Linux
 
 Importing data on Linux is similar to Mac. However the path is based on the current user not
