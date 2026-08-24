@@ -29,6 +29,7 @@
 		DA26B1352F049FC50001C3E9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1272F049FC50001C3E9 /* main.c */; };
 		DA26B1362F049FC50001C3E9 /* kindle.c in Sources */ = {isa = PBXBuildFile; fileRef = DA26B1232F049FC50001C3E9 /* kindle.c */; };
 		E60E98F2D8B6C90ED7FEB616 /* StitchGUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0104B2DE12749579F0D9A49 /* StitchGUIApp.swift */; };
+		2C1288DCBFF805A5B6700918 /* HighlightDetailWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4E0CCE5519B641B6AEE20D /* HighlightDetailWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -72,6 +73,7 @@
 		DAFD7970D2FADD2B6860D83F /* stitch_api.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = stitch_api.c; sourceTree = "<group>"; };
 		E49EE8E69CFE7E60EA298101 /* StitchBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StitchBridge.swift; sourceTree = "<group>"; };
 		FEC5B38D5E78D9FC614034B7 /* Stitch-GUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stitch-GUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		5A4E0CCE5519B641B6AEE20D /* HighlightDetailWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightDetailWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				2E1D9096647DA5D92D41008B /* ContentView.swift */,
 				3A1F0B02994DE65B855CB1D2 /* Highlight.swift */,
 				E49EE8E69CFE7E60EA298101 /* StitchBridge.swift */,
+				5A4E0CCE5519B641B6AEE20D /* HighlightDetailWindow.swift */,
 				FEC5B38D5E78D9FC614034B7 /* Stitch-GUI-Bridging-Header.h */,
 			);
 			path = StitchGUI;
@@ -273,6 +276,7 @@
 				AF45C90E371D506B3D6C5622 /* ContentView.swift in Sources */,
 				1A5F4CDCA099D02C1034F1A2 /* Highlight.swift in Sources */,
 				5945380A93C1CFC343406B16 /* StitchBridge.swift in Sources */,
+				2C1288DCBFF805A5B6700918 /* HighlightDetailWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Highlight: Identifiable {
+struct Highlight: Identifiable, Equatable {
     let id: String
     let type: String
     let deviceType: String
