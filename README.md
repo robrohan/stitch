@@ -1,7 +1,7 @@
 # Stitch
 
 Stitch is an application that extracts highlights from Kindle and Kobo devices. It puts the output into
-a local json file which can then be further processed. There is a UI for MacOS and a cli for Linux.
+a local json file which can then be further processed. There is a UI for macOS and a cli for Linux.
 
 ![macOS Kobo](examples/kobo.png)
 
@@ -82,7 +82,7 @@ After those are set, you can just run `stitch -t kobo; jq "." kobo.json`, for ex
 
 ### Mac
 
-Since the binary is not signed, you must first let Mac OS know the binary is ok to run. Do the following:
+If using the CLI the binary is not signed. You must first let Mac OS know the binary is ok to run. Do the following:
 
 - Download the zip file
 - Double click it. It will extract the file.
