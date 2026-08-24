@@ -49,7 +49,7 @@ unsigned char *base64_decode(const unsigned char *data, size_t input_length, siz
     if (decoding_table == NULL)
         build_decoding_table();
 
-    if (input_length % 4 != 0)
+    if (input_length % 4 != 0 || input_length < 4)
         return NULL;
 
     *output_length = input_length / 4 * 3;

@@ -47,14 +47,14 @@ struct ContentView: View {
 
                 LabeledContent("Input") {
                     HStack {
-                        TextField("Input file", text: $inputPath)
+                        TextField("File", text: $inputPath)
                         Button("Choose…") { chooseInput() }
                     }
                 }
 
                 LabeledContent("Output") {
                     HStack {
-                        TextField("Output file", text: $outputPath)
+                        TextField("File", text: $outputPath)
                         Button("Save As…") { chooseOutput() }
                     }
                 }

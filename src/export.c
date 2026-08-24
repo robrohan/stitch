@@ -56,8 +56,8 @@ char *hash_highlight(char *highlight)
     int hash = spookyhash32(highlight, strlen(highlight), HASH_SEED);
     snprintf(hashbuff, HASH_SIZE, "%d", hash);
 
-    int b64size = 0;
-    unsigned char *hash64 = base64_encode((unsigned char *)hashbuff, strlen(hashbuff), (size_t *)&b64size);
+    size_t b64size = 0;
+    unsigned char *hash64 = base64_encode((unsigned char *)hashbuff, strlen(hashbuff), &b64size);
     char *hash64str = calloc(sizeof(char), b64size + 1);
     memcpy(hash64str, hash64, b64size);
 

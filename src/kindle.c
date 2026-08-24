@@ -55,6 +55,14 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
         // End of record
         if (strcmp(buffer, end) == 0)
         {
+            // Malformed input (e.g. a stray or duplicate end marker) with no
+            // record actually in progress -- nothing to flush.
+            if (hl == NULL || highlight_text == NULL)
+            {
+                firstline = 1;
+                continue;
+            }
+
             char *b64 = (char *)hash_highlight(highlight_text);
 
             hl->id = calloc(sizeof(char), strlen(b64) + 1);
@@ -116,9 +124,9 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
 
 	    if (author_token == NULL)
 	    {
-	      strncpy(author_token, " ", 1);
+	      author_token = " ";
 	    }
-	    
+
 	    hl->attribution = calloc(sizeof(char), strlen(author_token) + 1);
 	    strcpy(hl->attribution, author_token);
 
@@ -146,8 +154,11 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
                 if (strcmp(space_token, "Page") == 0)
                 {
                     char *page_token = strtok(NULL, " ");
-                    int page = (int)strtol(page_token, NULL, 10);
-                    hl->page = page;
+                    if (page_token != NULL)
+                    {
+                        int page = (int)strtol(page_token, NULL, 10);
+                        hl->page = page;
+                    }
                 }
 
                 if (strcmp(space_token, "Loc.") == 0)
@@ -155,16 +166,24 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
                     // Next token is the location...
                     space_token = strtok(NULL, " ");
 
-                    // 10000-10000 (TODO: outside the loop)
-                    char *loc_string = calloc(sizeof(char), 20);
-                    memcpy(loc_string, space_token, strlen(space_token));
+                    if (space_token != NULL)
+                    {
+                        // 10000-10000 (TODO: outside the loop)
+                        size_t loc_len = strlen(space_token);
+                        if (loc_len > 19)
+                        {
+                            loc_len = 19;
+                        }
+                        char *loc_string = calloc(sizeof(char), 20);
+                        memcpy(loc_string, space_token, loc_len);
 
-                    int start = (int)strtol(loc_string, NULL, 10);
+                        int start = (int)strtol(loc_string, NULL, 10);
 
-                    hl->start_offset = start;
-                    // hl->end_offset = end;
+                        hl->start_offset = start;
+                        // hl->end_offset = end;
 
-                    free(loc_string);
+                        free(loc_string);
+                    }
                 }
 
                 if (strcmp(space_token, "Added") == 0)
@@ -172,17 +191,25 @@ int parse_kindle(char *filepath, char *fileout, char *(callback)(struct highligh
                     // Added on Wednesday, February 03, 2021, 08:07 AM
                     // February 03, 2021, 08:07 AM
                     char *date_string = calloc(sizeof(char), 50);
+                    size_t date_len = 0;
 
                     char *date_token = strtok(NULL, ",");
                     while (date_token != NULL)
                     {
                         date_token = strtok(NULL, ", ");
-                        if (date_token != NULL && strlen(date_string) < 50)
+                        if (date_token != NULL)
                         {
-                            strcat(date_string, date_token);
-                            strcat(date_string, " ");
+                            size_t token_len = strlen(date_token);
+                            // +1 for the trailing space, +1 for the null terminator
+                            if (date_len + token_len + 1 < 50)
+                            {
+                                memcpy(date_string + date_len, date_token, token_len);
+                                date_len += token_len;
+                                date_string[date_len++] = ' ';
+                            }
                         }
                     }
+                    date_string[date_len] = '\0';
                     hl->date_created = date_string;
                 }
 
