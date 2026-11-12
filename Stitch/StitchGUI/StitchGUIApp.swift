@@ -12,7 +12,12 @@ struct StitchGUIApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                ContentView()
+                    .tabItem { Text("Highlights") }
+                RigorMiningView()
+                    .tabItem { Text("Rigor Mining") }
+            }
         }
     }
 }

@@ -125,12 +125,19 @@ Kobo is similar:
 `Stitch/Stitch.xcodeproj` also has a `StitchGUI` scheme: a native SwiftUI app that
 wraps the exact same parsing code as the CLI (via `src/stitch_api.h`, a thin C API
 called from Swift through a bridging header). Pick Kindle or Kobo, choose an input
-file and where to save the JSON, hit Export, and the resulting highlights load into
-a searchable table in the window. Build/run it from Xcode, or:
+file, hit Load Highlights, and the resulting highlights load into a searchable table
+in the window. The JSON is always written to the app's caches folder
+(`~/Library/Caches/com.therohans.Stitch/kindle.json` or `kobo.json`). Build/run it from Xcode, or:
 
 ```bash
 xcodebuild -project Stitch/Stitch.xcodeproj -scheme StitchGUI build
 ```
+
+The GUI also has a **Rigor Mining** tab that syncs a Rigor Mining library to a mounted
+Kobo, doing the same thing as the rigormining skill's `run` command: it copies items queued
+to sync into a `rigormining` folder on the device, and deletes items queued for removal. If a
+copy was annotated on the Kobo, it uploads that copy back to the server before deleting it.
+The tab shares its server URL and API token with the skill through `~/.rigormining-sync.json`.
 
 ### Linux
 

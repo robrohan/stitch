@@ -4,7 +4,6 @@ import AppKit
 struct ContentView: View {
     @State private var device: DeviceType = .kindle
     @State private var inputPath: String = DeviceType.kindle.defaultInputPath
-    @State private var outputPath: String = ContentView.defaultOutputPath(for: .kindle)
 
     @State private var highlights: [Highlight] = []
     @State private var searchText: String = ""
@@ -42,20 +41,12 @@ struct ContentView: View {
                 .pickerStyle(.segmented)
                 .onChange(of: device) { _, newDevice in
                     inputPath = newDevice.defaultInputPath
-                    outputPath = ContentView.defaultOutputPath(for: newDevice)
                 }
 
                 LabeledContent("Input") {
                     HStack {
                         TextField("File", text: $inputPath)
                         Button("Choose…") { chooseInput() }
-                    }
-                }
-
-                LabeledContent("Output") {
-                    HStack {
-                        TextField("File", text: $outputPath)
-                        Button("Save As…") { chooseOutput() }
                     }
                 }
             }
@@ -70,7 +61,7 @@ struct ContentView: View {
                         Text("Load Highlights")
                     }
                 }
-                .disabled(isRunning || inputPath.isEmpty || outputPath.isEmpty)
+                .disabled(isRunning || inputPath.isEmpty)
 
                 if let count = lastExportCount {
                     Text("\(count) highlight\(count == 1 ? "" : "s") loaded")
@@ -168,22 +159,12 @@ struct ContentView: View {
         }
     }
 
-    private func chooseOutput() {
-        let panel = NSSavePanel()
-        panel.allowedContentTypes = [.json]
-        panel.nameFieldStringValue = URL(fileURLWithPath: outputPath).lastPathComponent
-        panel.directoryURL = URL(fileURLWithPath: outputPath).deletingLastPathComponent()
-        if panel.runModal() == .OK, let url = panel.url {
-            outputPath = url.path
-        }
-    }
-
     private func runImport() {
         errorMessage = nil
         isRunning = true
         let device = device
         let inputPath = inputPath
-        let outputPath = outputPath
+        let outputPath = ContentView.defaultOutputPath(for: device)
 
         Task {
             defer { isRunning = false }
